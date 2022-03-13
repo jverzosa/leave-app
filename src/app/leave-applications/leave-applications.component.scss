@@ -1,0 +1,28 @@
+.container {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: #317eb1;
+    vertical-align: middle;
+    margin: 10% 15%;
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    .form {
+        padding: 0% 20%;
+        .row {
+            width: 100%;
+        }
+        .box {
+            border: 1px solid #112082;
+            height: 30px;
+            padding: 10px;
+            .dropdown {
+                width: 250px;
+            }
+        }
+        
+    }
+    
+}
+

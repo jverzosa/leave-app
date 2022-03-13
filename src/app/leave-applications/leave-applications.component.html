@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="title" fxLayoutAlign="center">Leave Application Form</div>
+  <form [formGroup]="leaveFormGroup" class="form" fxLayoutAlign="center">
+    <div fxLayout="column" fxLayoutGap="30px" class="row">
+      <mat-form-field appearance="fill">
+        <mat-select class="box" matInput placeholder="Applicant" formControlName="applicant">
+          <mat-option class="dropdown" *ngFor="let option of employeeOpts" [value]="option">{{option.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input class="box" matInput placeholder="Start Date" [matDatepicker]="startDate" formControlName="startDate">
+        <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+        <mat-datepicker #startDate></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input class="box" matInput placeholder="Return Date" [min]="minReturnDate" [matDatepicker]="returnDate" formControlName="returnDate">
+        <mat-datepicker-toggle matSuffix [for]="returnDate"></mat-datepicker-toggle>
+        <mat-datepicker #returnDate></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill" fxFlex="2">
+        <input class="box" matInput maxlength="500" placeholder="Comments" formControlName="comments">
+      </mat-form-field>
+    </div>
+    <div fxLayout="column" fxLayoutGap="30px" class="row">
+      <mat-form-field appearance="fill">
+        <mat-select class="box" matInput placeholder="Manager" formControlName="manager"> 
+          <mat-option class="dropdown" *ngFor="let option of managerOpts" [value]="option">{{option.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input class="box" matInput placeholder="End Date" [min]="minEndDate" [matDatepicker]="endDate" formControlName="endDate">
+        <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+        <mat-datepicker #endDate></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input type="number" class="box" matInput placeholder="Number fo Days" formControlName="totalDays">
+      </mat-form-field>
+    </div>
+  </form>
+</div>
